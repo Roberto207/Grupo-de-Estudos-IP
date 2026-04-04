@@ -37,4 +37,8 @@ Debate final sobre qual IDE usar.
 
 3️⃣ Materiais de Estudo
 
+<<<<<<< HEAD
 Link útil: Baixando o instalador Python no Windows
+=======
+Link útil: Baixando o instalador Python no Windows
+>>>>>>> 8ce91f0 (nada)
