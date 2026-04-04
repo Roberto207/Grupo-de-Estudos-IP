@@ -1,19 +1,39 @@
-AULA DO ENCONTRO 0,VSCODE,AMBIENTE VIRTUAL (VENV),EXTENSOES E ORGANIZACAO DE PROJETO.
+Encontro 0 – VSCode, Ambiente Virtual (Venv), Extensões e Organização de Projeto
+README do Apresentador
 
-ASSUNTOS FALADOS: 
-1 -  COMPARACAO ENTRE COLAB E IDEs (COLAB É O LOCAL UTILIZADO NAS AULAS DE INTRODUCAO A PROGAMACAO,MAS É MUITO IMPORTANTE QUE OS ALUNOS MIGREM PARA AS suas IDEs preferidas o mais rapido possivel)
+Este documento organiza a apresentação da aula e serve como guia conceitual para o expositor. A estrutura abaixo deve ser seguida para garantir clareza e alinhamento com o grupo.
 
-2 - INSTALANDO PYTHON EM DIFERENTES SISTEMAS - Guia de instalacao de python em : Windows, Linux e Mac
+1️⃣ Motivação
 
-3 - Conectando Python - Conectando Python e Jupyter notebook ao VScode
+1.1 Comparação entre Colab e IDEs
+O Colab é utilizado nas aulas de introdução à programação.
+É muito importante que os alunos migrem para suas IDEs preferidas o mais rápido possível.
 
-4 - VENV - Criacao,ativacao,funcionalidades e por que usar
+2️⃣ Como Funciona
+2.1 Instalando Python
+Guia de instalação do Python em diferentes sistemas:
+Windows
+Linux
+Mac
+Link útil para download no Windows: python.org/downloads
 
-5 - Tour pela IDE - Produtividade
+2.2 Conectando Python
+Conectar Python e Jupyter Notebook ao VSCode.
 
-6 - Extensoes e organizacao - Extensoes uteis e profissionais ; introducao a organizacao profissional (um pouco de modularizacao).
+2.3 Venv
+Criação, ativação e funcionalidades do ambiente virtual.
+Por que usar o Venv.
 
-7 - VScode vs Pycharm - Debate final sobre qual IDE usar 
+2.4 Tour pela IDE
+Funcionalidades e recursos de produtividade do VSCode.
 
-links uteis: 
-Baixando o instalador python no Windows: https://www.python.org/downloads/
+2.5 Extensões e Organização
+Extensões úteis e profissionais.
+Introdução à organização profissional do projeto, incluindo modularização.
+
+2.6 VSCode vs PyCharm
+Debate final sobre qual IDE usar.
+
+
+3️⃣ Materiais de Estudo
+Link útil: Baixando o instalador Python no Windows
