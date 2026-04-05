@@ -16,3 +16,6 @@ git config --global user.email "seu@email.com"
 1.4 - Se o repositório ja existia antes,possui conteudo e voce nao fez nenhuma alteracao na sua pasta local,é possivel clonar o repositorio remoto pra dentro da sua pasta
 -git clone 
 
+1.5 - Crie um arquivo README.MD com a descricao e instrucoes do seu projeto e um arquivo .gitignore que serve pra marcar arquivos que nao serao enviados para o repositorio remoto por questoes de seguranca (como o .env e o .venv)
+
+1.6 - Arquivo .env = arquivo onde serao guardadas senhas pessoais,logins,api_keys etc. Tudo de confidencial e pessoal deve ser guardado pelo .env
