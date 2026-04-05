@@ -19,7 +19,8 @@ Crie um repositório no GitHub. Configure para criar o repositório sem README, 
 
 2.2 Conectando Git local ao GitHub
 
-No seu ambiente local, inicialize o Git na pasta do projeto com git init. Conecte o repositório remoto usando git remote add origin URL-do-repositorio-GitHub.
+git init    No seu ambiente local, inicialize o Git na pasta do projeto. Conecte o repositório remoto usando git remote add origin URL-do-repositorio-GitHub.
+git remote add origin URL-do-repositorio-GitHub     Conectando o repostirorio local ao remoto 
 
 2.3 Configuração de usuário (primeiro uso)
 
@@ -28,6 +29,7 @@ Se for a primeira vez usando Git, configure o usuário com git config --global u
 2.4 Clonando repositório existente
 
 Se o repositório já existia e você ainda não tem nada na sua pasta local, pode cloná-lo usando git clone URL-do-repositorio.
+Se na sua pasta local ja existem coisas, pode se usar git pull para trazer as mudancas do remoto para o local 
 
 2.5 Arquivos essenciais
 
@@ -38,8 +40,8 @@ Crie um arquivo README.md com a descrição e instruções do projeto. Crie um a
 Para salvar mudanças e enviá-las ao remoto:
 
 Adicione arquivos ao stage usando git add ., o ponto final adiciona todos os arquivos do projeto, exceto os ignorados pelo .gitignore.
-Salve as mudanças localmente com git commit -m "nome_commit".
-Envie as mudanças para o repositório remoto com git push origin main.
+git commit -m "nome-commit"      (Salve as mudanças localmente.)
+git push origin nome-branch (Envie as mudanças para o repositório remoto.)
 
 Esse é o fluxo básico do dia a dia para versionar projetos.
 
@@ -80,12 +82,241 @@ Pull → editar código → add → commit → push.
 
 Criar branch → desenvolver funcionalidades → merge → enviar para o remoto.
 
-4️⃣ Comandos extras úteis
+4️⃣  Estrutura de um Repositório GitHub Profissional
+
+Um repositório profissional deve ser organizado, seguro e fácil de entender. Ele precisa deixar claro o que o projeto faz, como usar e garantir que informações sensíveis não sejam expostas.
+
+4.1 Arquivos essenciais
+README.md
+Documento principal do projeto. Deve conter descrição, instruções e contexto do que está sendo desenvolvido.
+.gitignore
+Arquivo responsável por definir o que não será enviado ao repositório remoto, evitando arquivos desnecessários ou sensíveis.
+.env
+Arquivo onde ficam armazenadas informações confidenciais, como senhas, logins e API keys. Deve sempre ser ignorado pelo .gitignore.
+
+4.2 Organização básica
+Separar arquivos do projeto de forma clara
+Evitar misturar código com arquivos desnecessários
+Manter uma estrutura simples e compreensível
+
+4.3 Boas práticas
+Nunca enviar dados sensíveis para o GitHub
+Sempre utilizar .gitignore corretamente
+Manter o README atualizado e explicativo
+Garantir que o projeto seja fácil de entender por outras pessoas
+
+
+
+5️⃣4️ Comandos extras úteis
 git status → Ver o status do repositório.
 git log → Ver histórico de commits.
 git branch → Ver branches existentes.
 git remote -v → Ver repositórios remotos.
 git fetch → Baixar alterações do remoto sem aplicá-las imediatamente.
-5️⃣ Materiais de estudo
+git --help --> lista alguns comandos uteis
+
+6️⃣5️ Materiais de estudo
 GitHub (plataforma de versionamento).
 Documentação oficial do Git.
+
+6️
+=============================================================================================================================
+                             PARTE 2 DA AULA - REVISANDO BASICOS DE INTRODUCAO A PROGAMACAO
+=============================================================================================================================
+Essa parte da aula passara brevimente pelos conceitos ja mostrados na aula do Leo para poder dar mais atencao a alguns 
+assuntos importantes que nao foram mostrados. 
+
+COLAB COM A PRATICA : https://colab.research.google.com/drive/1XJhNcn9kg6DLE9xaa1PJQFNYCHC3Vj6r?usp=sharing
+
+------> Conceitos ja vistos: 
+
+1 - Tipos de dados:
+string = dados de texto,precisa de aspas simples ou duplas ''
+int = numeros inteiros sem virgula 
+float = numeros com virgula (numeros flutuantes)
+bool = dados booleanos (True or False)
+
+1.1 Comandos interessantes para strings:
+De forma resumida,strings funcionam como listas,onde cada letra numa frase apresenta um index e pode ser procurado tal qual 
+em uma lista.
+
+#len = mostra o tamanho da coisa
+#[0:10],[:10],[0:10:2] = mostra os indices 
+#.count('exemplo') = conta qnts vezes um caracter/caracteres apareceu
+#.find('exemplo') = acha a posicao em q determinado caracter/s esta
+#.upper() = tudo maiusculo
+#.lower() = tudo minusculo
+#.capitalize() = deixa a primeira letra da string em maiusculo
+#.title() = deixa o inicio de cada palavra em maiusculo,bom usar .strip antes
+#.strip() = tira espacos inuteis
+#.split()=separa as palavras de uma frase com base nos espacos,transformando em uma lista
+#'exemplo'.join() = separa as palavras com oq esta entre aspas, bom usar split antes se nao separa letra por letra
+#exemplo.lower().find('exemplo') = minuscula tudo e caça determinado trecho
+
+
+2 - Estruturas de condicao :
+O codigo segue diferentes caminhos com base em condicoes (funciona a base da logica matematica)
+
+if x == x:
+    print("x é igual a x")
+elif x == y:
+    print(x é igual a y)
+else:
+    print(x nao é igual a nada)
+
+2.1 Outros exemplos de if:
+if not x:
+if x and y:
+if x or y:
+
+2.2 Diferenca entre usar varios If e usar Elif:
+Ao usar varios If,o codigo ira analisar todas as condicoes,ou seja,mesmo que uma condicao if anterior for verdadeira,
+todas as outras serao checadas,possibilitando que varias condicoes sejam executadas.
+- Com Elif,assim que uma condicao for cumprida,as outras deixam de ser analisadas. Cenario bom para quando so queremos uma 
+condicao sendo executadas,ao inves de multiplas. 
+
+3 - Lacos de Repeticao: 
+For = Usado quando você sabe quantas vezes quer repetir ou quer iterar sobre uma coleção (lista, tupla, string, etc.).
+
+- Sintaxe básica:
+for i in range(5):  # repete 5 vezes: 0,1,2,3,4
+    print(i)
+
+ou percorrendo listas
+
+frutas = ["maçã", "banana", "laranja"]
+for fruta in frutas:
+    print(fruta)
+
+While = Usado quando você não sabe quantas vezes vai repetir, mas quer repetir enquanto uma condição for verdadeira.
+
+Sintaxe básica:
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+
+
+4 - Definindo funcoes : 
+Funcoes sao blocos de codigo reutilaveis. A estrutura delas é feita de def nome_funcao(parametros):
+onde os parametros sao informacoes que serao utilizadas dentro da funcao
+ex:
+def saudacao(nome):
+    print(f"{nome}")
+
+chamando a funcao
+saudacao(nome)
+
+4.1 Funcoes tambem podem retornar valores
+def soma(a,b):
+    a+b
+
+resultado = soma(4,3)
+print(resultado)
+
+
+--- Coneceitos nao Vistos:
+
+1. Estruturas de dados compostos
+
+Estruturas de dados compostos permitem armazenar múltiplos valores e organizar informações complexas.
+
+Listas
+
+Coleções ordenadas e mutáveis.
+Métodos importantes:
+append(valor) → adiciona no final da lista.
+insert(indice, valor) → insere valor em posição específica.
+remove(valor) → remove a primeira ocorrência do valor.
+pop() → remove o último elemento (ou o da posição indicada).
+sort() → ordena a lista.
+len(lista) → retorna tamanho da lista.
+Exemplo em texto: lista frutas = ["maçã", "banana", "laranja"]; adicionar "pera" → frutas.append("pera"); remover "banana" → frutas.remove("banana").
+
+Tuplas
+
+Coleções ordenadas e imutáveis.
+Úteis para valores fixos ou constantes, como coordenadas ou configurações que não devem mudar.
+Métodos importantes:
+len(tupla) → retorna tamanho da tupla.
+count(valor) → conta quantas vezes o valor aparece.
+index(valor) → retorna a posição da primeira ocorrência do valor.
+Exemplo em texto: tupla coordenadas = (10, 20); acessar coordenadas[0] → 10; contar quantas vezes 20 aparece → coordenadas.count(20) → 1.
+
+Dicionários
+
+Coleções de pares chave-valor, úteis para associar dados de forma estruturada.
+Métodos importantes:
+dicionario.keys() → retorna todas as chaves.
+dicionario.values() → retorna todos os valores.
+dicionario.items() → retorna pares chave-valor.
+dicionario.get(chave) → retorna valor associado à chave, sem gerar erro se não existir.
+dicionario.update({"chave": valor}) → adiciona ou atualiza valor.
+Exemplo em texto: usuario = {"nome": "Ana", "idade": 25, "email": "ana@email.com"}; acessar usuario["nome"] → "Ana"; atualizar idade com usuario["idade"] = 26; obter todas as chaves → usuario.keys() → ["nome", "idade", "email"].
+
+Boas práticas:
+
+Usar listas para coleções mutáveis, tuplas para valores fixos e dicionários para dados associados.
+Iterar de forma clara e evitar alterações inesperadas de dados importantes.
+
+
+
+
+2. Tratamento de erros (try e except)
+
+Permite que o programa continue executando mesmo quando um erro ocorre.
+try → bloco onde o código que pode gerar erro é executado.
+except → bloco que define o que fazer caso um erro ocorra.
+else → bloco que so roda caso nao tenham erros captadaos pelo except
+finally → bloco que sempre roda,indepentende dos erros
+
+É possível capturar tipos específicos de erro para maior controle.
+
+Exemplo em texto:
+
+Tentar dividir dois números; se o divisor for zero, exibir "Erro: divisão por zero" sem interromper o programa.
+Tentar abrir arquivo que pode não existir; se ocorrer FileNotFoundError, exibir mensagem de alerta.
+
+Boas práticas:
+
+Tratar apenas erros esperados, evitando capturar exceções genéricas desnecessariamente.
+Fornecer mensagens úteis para usuário ou registrar logs para depuração.
+
+
+
+
+
+3. Modularização
+
+Organizar o código em módulos (arquivos separados) com funções e classes específicas.
+Permite dividir responsabilidades, facilitar manutenção e reutilizar código.
+Um módulo pode ser importado em outro, permitindo aproveitar funções e classes já definidas.
+
+Módulos que você quer importar precisam estar na mesma pasta do script principal ou em subpastas com __init__.py (para pacotes).
+Se estiver em subpasta sem __init__.py, o Python pode não reconhecer como pacote. No vscode com python,ao tentar importar modulos,é criado automaticamente
+um arquivo __pychache__ com as informacoes necessarias pra ser possivel importar coisas daquela pasta
+
+Exemplo em texto:
+
+Criar módulo funcoes_matematica.py com função soma(a, b) → importar no arquivo principal e usar soma(4, 3).
+Separar funções de visualização, processamento de dados e lógica de negócio em módulos distintos.
+
+Exemplo:
+meu_projeto/
+│
+├─ main.py            # Arquivo principal
+├─ funcoes_matematica.py  # Módulo com funções
+└─ utils/
+    ├─ __init__.py    # Torna a pasta um pacote
+    └─ funcoes_gerais.py     # Outro módulo
+
+from funcoes_matematica import soma, divisao, multiplicacao
+
+Boas práticas:
+
+Manter cada módulo focado em um propósito específico.
+Evitar duplicação de código.
+Documentar funções e módulos com comentários claros.
+
+
+
