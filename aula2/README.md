@@ -120,9 +120,8 @@ git remote -v → Ver repositórios remotos.
 git fetch → Baixar alterações do remoto sem aplicá-las imediatamente.
 git --help --> lista alguns comandos uteis
 
-================================================================================
+==============================================================
 PARTE 2 DA AULA - REVISANDO BÁSICOS DE INTRODUÇÃO À PROGRAMAÇÃO
-================================================================================
 Essa parte da aula passara brevimente pelos conceitos ja mostrados na aula do Leo para poder dar mais atencao a alguns 
 assuntos importantes que nao foram mostrados. 
 
