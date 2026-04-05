@@ -37,9 +37,9 @@ Crie um arquivo README.md com a descrição e instruções do projeto. Crie um a
 
 Para salvar mudanças e enviá-las ao remoto:
 
-Use git add . para adicionar todos os arquivos modificados ao stage, exceto os ignorados pelo .gitignore.
-Use git commit -m "nome_commit" para salvar as mudanças localmente.
-Use git push origin main para enviar as mudanças salvas para o repositório remoto.
+Adicione arquivos ao stage usando git add ., o ponto final adiciona todos os arquivos do projeto, exceto os ignorados pelo .gitignore.
+Salve as mudanças localmente com git commit -m "nome_commit".
+Envie as mudanças para o repositório remoto com git push origin main.
 
 Esse é o fluxo básico do dia a dia para versionar projetos.
 
@@ -47,7 +47,15 @@ Esse é o fluxo básico do dia a dia para versionar projetos.
 
 Para trazer alterações do repositório remoto para sua máquina, use git pull origin main.
 
-2.8 Branchs
+2.8 Git Fetch
+
+O comando git fetch é usado para baixar atualizações do repositório remoto sem aplicá-las imediatamente na sua branch atual.
+
+Ele atualiza referências locais de todas as branches remotas (como origin/main), mas não altera o conteúdo da sua branch atual.
+É útil quando você quer ver quais alterações foram feitas remotamente antes de decidir fazer merge ou rebase.
+Após um git fetch, você pode comparar sua branch atual com a versão remota, e só então integrar mudanças manualmente usando git merge ou git rebase.
+Em resumo: git fetch = “trazer informações do remoto sem misturar nada no que estou trabalhando agora”.
+2.9 Branchs
 
 Branchs são ramificações do fluxo principal do código. Elas permitem trabalhar em funcionalidades separadas sem impactar o código principal. Por exemplo, a branch main pode conter a versão original do projeto, enquanto uma branch feature é usada para testar novas funcionalidades. Alterações só aparecem na main após um merge.
 
@@ -55,7 +63,7 @@ Comandos básicos de branch:
 Criar branch: git branch nome-branch
 Trocar de branch: git switch nome-branch
 Criar e trocar de branch ao mesmo tempo: git checkout -b nome-branch
-2.9 Merge (junção de branchs)
+2.10 Merge (junção de branchs)
 
 O merge permite juntar alterações de uma branch em outra. Pode ser feito pelo GitHub (forma visual) ou pelo terminal. O merge sempre acontece na branch que está ativa, juntando nela as alterações da branch selecionada. Por exemplo, para juntar a branch feature/login na main, você deve primeiro estar na main e depois fazer o merge da feature/login.
 
@@ -78,3 +86,6 @@ git log → Ver histórico de commits.
 git branch → Ver branches existentes.
 git remote -v → Ver repositórios remotos.
 git fetch → Baixar alterações do remoto sem aplicá-las imediatamente.
+5️⃣ Materiais de estudo
+GitHub (plataforma de versionamento).
+Documentação oficial do Git.
