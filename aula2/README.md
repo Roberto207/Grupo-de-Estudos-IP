@@ -94,6 +94,11 @@ Arquivo responsável por definir o que não será enviado ao repositório remoto
 .env
 Arquivo onde ficam armazenadas informações confidenciais, como senhas, logins e API keys. Deve sempre ser ignorado pelo .gitignore.
 
+requirements.txt
+arquivo onde ficam todas as dependencias (como bibliotecas) do seu codigo,importante para que seu codigo possa ser reutilizado em outras maquinas.
+Arquivo precisa ficar de preferencia na raiz do projeto
+possivel criar automaticamente um arquivo requirementes usando pip freeze > requirements.txt
+
 4.2 Organização básica
 Separar arquivos do projeto de forma clara
 Evitar misturar código com arquivos desnecessários
@@ -115,11 +120,6 @@ git remote -v → Ver repositórios remotos.
 git fetch → Baixar alterações do remoto sem aplicá-las imediatamente.
 git --help --> lista alguns comandos uteis
 
-6️⃣5️ Materiais de estudo
-GitHub (plataforma de versionamento).
-Documentação oficial do Git.
-
-6️
 =============================================================================================================================
                              PARTE 2 DA AULA - REVISANDO BASICOS DE INTRODUCAO A PROGAMACAO
 =============================================================================================================================
