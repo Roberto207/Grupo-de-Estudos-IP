@@ -13,14 +13,15 @@ Visualização e interpretação dos dados com Matplotlib e outras bibliotecas.
 Criação de modelos de Machine Learning e avaliação de desempenho.
 Versionamento de todo o projeto usando Git, enviando para um repositório GitHub profissional.
 Deploy do projeto, opcionalmente, em nuvens gratuitas, com APIs ou pipelines simples para testes.
-Metodologia e Encontros
 
-Configurando ambiente de desenvolvimento,revisando basicos e nivelando conceitos (Encontro 0 e 1):
+**Metodologia e Encontros ***
+
+- Configurando ambiente de desenvolvimento,revisando basicos e nivelando conceitos (Encontro 0 e 1):
 
 Encontro 0 – Akcit e Ceia: Configuração do ambiente de desenvolvimento (VSCode, venv, extensões), organização de pastas e boas práticas de programação.
 Encontro 1 – Git na prática: Revisão de conceitos básicos, versionamento de código e GitHub.
 
-Projeto Profissional (Encontros 2 a 4):
+- Projeto Profissional (Encontros 2 a 4):
 
 Encontro 2 – Ciência de Dados: Aprender a manipular dados, limpar, tratar valores faltantes, normalizar e transformar variáveis usando Pandas e NumPy. Exposição a várias bases de dados e tipos de dados compostos.
 
@@ -28,7 +29,7 @@ Encontro 3 – Visualização de Dados e Introdução a ML: Criar gráficos e da
 
 Encontro 4 – Aprofundando ML: Treinamento de modelos de previsão (supervisionados) e classificação. Escolha das melhores estratégias, definição de métricas de avaliação e otimização do modelo. Aprender a separar conjuntos de treino e teste, além de validação cruzada.
 
-Deploy (Encontros 5 e 6):
+- Deploy (Encontros 5 e 6):
 
 Encontro 5 – Deploy Tradicional: Conceitos de Docker, Cloud, VPS e Kubernetes.
 
